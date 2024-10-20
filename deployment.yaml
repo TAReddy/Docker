@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: extra-credit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ashwitha
+  template:
+    metadata:
+      labels:
+        app: ashwitha
+    spec:
+      containers:
+      - name: ashwitha
+        image: ashwitha:latest # Replace with your Docker image name
+        ports:
+        - containerPort: 8080
